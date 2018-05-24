@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertoniAcessorios", "BertoniAcessorios\BertoniAcessorios.csproj", "{45CD7C7F-4E09-43F6-901A-5BD00ED341AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertoniAcessorios.BO", "BetoniAcessorios.BO\BertoniAcessorios.BO.csproj", "{EB90489C-BEA6-49D3-B1E5-82B6825BB8D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertoniAcessorios.DALC", "BertoniAcessorios.DALC\BertoniAcessorios.DALC.csproj", "{4B560CB9-02D2-440A-86EC-A992EDC92279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertoniAcessorios.BE", "BertoniAcessorios.BE\BertoniAcessorios.BE.csproj", "{AD220944-9930-46EE-91F0-46F2555DA3D3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorBertoniAcessorios", "Setup1\Setup1.vdproj", "{18A27853-65E0-4F06-9945-79989767C1AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45CD7C7F-4E09-43F6-901A-5BD00ED341AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45CD7C7F-4E09-43F6-901A-5BD00ED341AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45CD7C7F-4E09-43F6-901A-5BD00ED341AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45CD7C7F-4E09-43F6-901A-5BD00ED341AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB90489C-BEA6-49D3-B1E5-82B6825BB8D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB90489C-BEA6-49D3-B1E5-82B6825BB8D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB90489C-BEA6-49D3-B1E5-82B6825BB8D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB90489C-BEA6-49D3-B1E5-82B6825BB8D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B560CB9-02D2-440A-86EC-A992EDC92279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B560CB9-02D2-440A-86EC-A992EDC92279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B560CB9-02D2-440A-86EC-A992EDC92279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B560CB9-02D2-440A-86EC-A992EDC92279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD220944-9930-46EE-91F0-46F2555DA3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD220944-9930-46EE-91F0-46F2555DA3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD220944-9930-46EE-91F0-46F2555DA3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD220944-9930-46EE-91F0-46F2555DA3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A27853-65E0-4F06-9945-79989767C1AB}.Debug|Any CPU.ActiveCfg = Debug
+		{18A27853-65E0-4F06-9945-79989767C1AB}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EDFCAA7-C505-406B-87F7-EF7A22613E74}
+	EndGlobalSection
+EndGlobal
