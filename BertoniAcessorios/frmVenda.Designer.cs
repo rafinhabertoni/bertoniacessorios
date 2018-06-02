@@ -40,6 +40,8 @@
             this.lblVendedor = new System.Windows.Forms.Label();
             this.cmbFornecedor = new System.Windows.Forms.ComboBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
+            this.txtDataVenda = new System.Windows.Forms.TextBox();
+            this.lblDataVenda = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbVendedor
@@ -100,7 +102,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(41, 260);
+            this.btnSalvar.Location = new System.Drawing.Point(41, 303);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 31;
@@ -156,11 +158,30 @@
             this.lblFornecedor.TabIndex = 40;
             this.lblFornecedor.Text = "Fornecedor";
             // 
+            // txtDataVenda
+            // 
+            this.txtDataVenda.Location = new System.Drawing.Point(141, 257);
+            this.txtDataVenda.MaxLength = 10;
+            this.txtDataVenda.Name = "txtDataVenda";
+            this.txtDataVenda.Size = new System.Drawing.Size(100, 20);
+            this.txtDataVenda.TabIndex = 43;
+            // 
+            // lblDataVenda
+            // 
+            this.lblDataVenda.AutoSize = true;
+            this.lblDataVenda.Location = new System.Drawing.Point(39, 260);
+            this.lblDataVenda.Name = "lblDataVenda";
+            this.lblDataVenda.Size = new System.Drawing.Size(79, 13);
+            this.lblDataVenda.TabIndex = 42;
+            this.lblDataVenda.Text = "Data da Venda";
+            // 
             // frmVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 330);
+            this.ClientSize = new System.Drawing.Size(623, 362);
+            this.Controls.Add(this.txtDataVenda);
+            this.Controls.Add(this.lblDataVenda);
             this.Controls.Add(this.cmbFornecedor);
             this.Controls.Add(this.lblFornecedor);
             this.Controls.Add(this.cmbVendedor);
@@ -194,5 +215,7 @@
         private System.Windows.Forms.Label lblVendedor;
         private System.Windows.Forms.ComboBox cmbFornecedor;
         private System.Windows.Forms.Label lblFornecedor;
+        private System.Windows.Forms.TextBox txtDataVenda;
+        private System.Windows.Forms.Label lblDataVenda;
     }
 }

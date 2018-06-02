@@ -29,7 +29,8 @@ AS
 		vd.nome as nomevendedor,
 		p.codigo + '-' + p.nome as codigonomeproduto,
 		p.idfornecedor,
-		f.nome as nomefornecedor
+		f.nome as nomefornecedor,
+		v.dtvenda
 	FROM
 		venda v
 		INNER JOIN produto p ON p.id = v.idproduto
@@ -39,7 +40,7 @@ AS
 		(v.idvendedor = @IdVendedor OR @IdVendedor is null)
 		AND (v.idproduto = @IdProduto OR @IdProduto is null)
 		AND (v.ativo = @Ativo OR @Ativo is null)
-		AND (CONVERT(date,v.dtinclusao) = CONVERT(date,@DtVenda) OR @DtVenda is null)
+		AND (CONVERT(date,v.dtvenda) = CONVERT(date,@DtVenda) OR @DtVenda is null)
 		AND (p.idfornecedor = @IdFornecedor OR @IdFornecedor is null)
 
 GO

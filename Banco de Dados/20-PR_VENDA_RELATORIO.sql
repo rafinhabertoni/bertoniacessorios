@@ -7,7 +7,13 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE dbo.PR_VENDA_RELATORIO 
+CREATE PROCEDURE dbo.PR_VENDA_RELATORIO
+(
+	@idFornecedor INT = NULL,
+	@idVendedor INT = NULL,
+	@idProduto INT = NULL,
+	@tipoRelatorio INT = NULL
+)
 AS
 	SELECT 
 		f.nome as nomefornecedor,
@@ -16,7 +22,7 @@ AS
 		p.valorcompra,
 		v.valorvenda,
 		v.valorcomissao,
-		v.dtinclusao as datavenda,
+		v.dtvenda as datavenda,
 		(v.valorvenda - v.valorcomissao - p.valorcompra) as valorlucro
 	FROM
 		venda v
@@ -27,5 +33,8 @@ AS
 		v.ativo = 1
 		and p.ativo = 1
 		and vd.ativo = 1
+		AND (f.id = @idFornecedor OR @idFornecedor IS NULL)
+		AND (vd.id = @idVendedor OR @idVendedor IS NULL)
+		AND (p.id = @idProduto OR @idProduto IS NULL)
 
 GO

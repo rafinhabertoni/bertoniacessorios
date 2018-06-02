@@ -35,13 +35,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.dgProduto = new System.Windows.Forms.DataGridView();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.cmbTipoProduto = new System.Windows.Forms.ComboBox();
-            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idtipoproduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +50,13 @@
             this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.cmbTipoProduto = new System.Windows.Forms.ComboBox();
+            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,72 +140,9 @@
             this.dgProduto.Location = new System.Drawing.Point(27, 264);
             this.dgProduto.Name = "dgProduto";
             this.dgProduto.ReadOnly = true;
-            this.dgProduto.Size = new System.Drawing.Size(881, 227);
+            this.dgProduto.Size = new System.Drawing.Size(884, 330);
             this.dgProduto.TabIndex = 15;
             this.dgProduto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProduto_CellContentClick);
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(797, 497);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(75, 23);
-            this.btnNovo.TabIndex = 24;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // cmbTipoProduto
-            // 
-            this.cmbTipoProduto.FormattingEnabled = true;
-            this.cmbTipoProduto.Location = new System.Drawing.Point(100, 140);
-            this.cmbTipoProduto.Name = "cmbTipoProduto";
-            this.cmbTipoProduto.Size = new System.Drawing.Size(171, 21);
-            this.cmbTipoProduto.TabIndex = 25;
-            // 
-            // cmbFornecedor
-            // 
-            this.cmbFornecedor.FormattingEnabled = true;
-            this.cmbFornecedor.Location = new System.Drawing.Point(100, 100);
-            this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(171, 21);
-            this.cmbFornecedor.TabIndex = 26;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(24, 186);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigo.TabIndex = 27;
-            this.lblCodigo.Text = "Código";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(100, 179);
-            this.txtCodigo.MaxLength = 200;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(171, 20);
-            this.txtCodigo.TabIndex = 28;
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "Ativo",
-            "Inativo"});
-            this.cmbStatus.Location = new System.Drawing.Point(100, 222);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(99, 21);
-            this.cmbStatus.TabIndex = 30;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(24, 225);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(37, 13);
-            this.lblStatus.TabIndex = 29;
-            this.lblStatus.Text = "Status";
             // 
             // codigo
             // 
@@ -331,11 +268,74 @@
             this.Excluir.UseColumnTextForButtonValue = true;
             this.Excluir.Width = 70;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(836, 610);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnNovo.TabIndex = 24;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // cmbTipoProduto
+            // 
+            this.cmbTipoProduto.FormattingEnabled = true;
+            this.cmbTipoProduto.Location = new System.Drawing.Point(100, 140);
+            this.cmbTipoProduto.Name = "cmbTipoProduto";
+            this.cmbTipoProduto.Size = new System.Drawing.Size(171, 21);
+            this.cmbTipoProduto.TabIndex = 25;
+            // 
+            // cmbFornecedor
+            // 
+            this.cmbFornecedor.FormattingEnabled = true;
+            this.cmbFornecedor.Location = new System.Drawing.Point(100, 100);
+            this.cmbFornecedor.Name = "cmbFornecedor";
+            this.cmbFornecedor.Size = new System.Drawing.Size(171, 21);
+            this.cmbFornecedor.TabIndex = 26;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(24, 186);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.TabIndex = 27;
+            this.lblCodigo.Text = "Código";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(100, 179);
+            this.txtCodigo.MaxLength = 200;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(171, 20);
+            this.txtCodigo.TabIndex = 28;
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.cmbStatus.Location = new System.Drawing.Point(100, 222);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(99, 21);
+            this.cmbStatus.TabIndex = 30;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(24, 225);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(37, 13);
+            this.lblStatus.TabIndex = 29;
+            this.lblStatus.Text = "Status";
+            // 
             // frmListaProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 529);
+            this.ClientSize = new System.Drawing.Size(933, 645);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtCodigo);

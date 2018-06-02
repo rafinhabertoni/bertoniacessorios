@@ -13,7 +13,8 @@ CREATE PROCEDURE dbo.PR_VENDA_SALVAR
 	@IdVendedor int,
 	@IdProduto int,
 	@ValorVenda decimal(16,2),
-	@ValorComissao decimal(16,2)
+	@ValorComissao decimal(16,2),
+	@DataVenda datetime
 )
 AS
 
@@ -26,7 +27,8 @@ BEGIN
 		valorvenda,
 		valorcomissao,
 		ativo,
-		dtinclusao
+		dtinclusao,
+		dtvenda
 	) 
 	VALUES
 	(
@@ -35,7 +37,8 @@ BEGIN
 		@ValorVenda,
 		@ValorComissao,
 		1,
-		Getdate()
+		Getdate(),
+		@DataVenda
 	)
 
 	SELECT SCOPE_IDENTITY();
@@ -47,7 +50,8 @@ BEGIN
 	idproduto = @IdProduto,
 	valorvenda = @ValorVenda,
 	valorcomissao = @ValorComissao,
-	dtalteracao = Getdate()
+	dtalteracao = Getdate(),
+	dtvenda = @DataVenda
 	where id = @Id
 
 	Select @Id

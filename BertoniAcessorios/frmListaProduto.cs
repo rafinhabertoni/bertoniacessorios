@@ -55,12 +55,14 @@ namespace BertoniAcessorios
         public void CarregarComboFornecedor()
         {
             FornecedorBO fornecedorBO = new FornecedorBO();
-            List<FornecedorBE> listaFornecedorBE = fornecedorBO.Listar(new FornecedorBE());
+            FornecedorBE fornecedorBE = new FornecedorBE();
+            fornecedorBE.Ativo = true;
+            List<FornecedorBE> listaFornecedorBE = fornecedorBO.Listar(fornecedorBE);
 
             cmbFornecedor.Items.Add("Selecione");
-            foreach (FornecedorBE fornecedorBE in listaFornecedorBE)
+            foreach (FornecedorBE retornoFornecedorBE in listaFornecedorBE)
             {
-                cmbFornecedor.Items.Add(fornecedorBE);
+                cmbFornecedor.Items.Add(retornoFornecedorBE);
             }
             cmbFornecedor.DisplayMember = "Nome";
             cmbFornecedor.ValueMember = "Id";

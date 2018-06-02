@@ -40,6 +40,7 @@ namespace BertoniAcessorios
             this.cmbVendedor.SelectedIndex = this.cmbVendedor.FindString(vendaBE.NomeVendedor);
             this.cmbFornecedor.SelectedIndex = this.cmbFornecedor.FindString(vendaBE.NomeFornecedor);
             this.cmbProduto.SelectedIndex = this.cmbProduto.FindString(vendaBE.CodigoNomeProduto);
+            this.txtDataVenda.Text = vendaBE.DataVenda.Value.ToString("dd/MM/yyyy");
         }
 
         public void CarregarComboFornecedor()
@@ -133,6 +134,11 @@ namespace BertoniAcessorios
                 MessageBox.Show("O campo Valor de Comissão deve ser maior ou igual a zero.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (String.IsNullOrEmpty(this.txtDataVenda.Text))
+            {
+                MessageBox.Show("O campo Data da Venda é obrigatório.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
             VendaBO vendaBO = new VendaBO();
             VendaBE vendaBE = vendaBO.Consultar(null, Convert.ToInt32(((BertoniAcessorios.BE.ProdutoBE)this.cmbProduto.SelectedItem).Id));
@@ -156,6 +162,7 @@ namespace BertoniAcessorios
             vendaBE.IdVendedor = Convert.ToInt32(((BertoniAcessorios.BE.VendedorBE)this.cmbVendedor.SelectedItem).Id);
             vendaBE.ValorComissao = Convert.ToDecimal(this.txtValorComissao.Text);
             vendaBE.ValorVenda = Convert.ToDecimal(this.txtValorVenda.Text);
+            vendaBE.DataVenda = Convert.ToDateTime(this.txtDataVenda.Text);
             vendaBE.Id = this.id;
             return vendaBE;
         }

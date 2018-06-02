@@ -6722,6 +6722,8 @@ namespace BertoniAcessorios {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class PR_VENDA_RELATORIODataTable : global::System.Data.TypedTableBase<PR_VENDA_RELATORIORow> {
             
+            private global::System.Data.DataColumn columnnomefornecedor;
+            
             private global::System.Data.DataColumn columnnomeproduto;
             
             private global::System.Data.DataColumn columnnomevendedor;
@@ -6735,8 +6737,6 @@ namespace BertoniAcessorios {
             private global::System.Data.DataColumn columndatavenda;
             
             private global::System.Data.DataColumn columnvalorlucro;
-            
-            private global::System.Data.DataColumn columnnomefornecedor;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -6769,6 +6769,14 @@ namespace BertoniAcessorios {
             protected PR_VENDA_RELATORIODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn nomefornecedorColumn {
+                get {
+                    return this.columnnomefornecedor;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6829,14 +6837,6 @@ namespace BertoniAcessorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nomefornecedorColumn {
-                get {
-                    return this.columnnomefornecedor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6872,17 +6872,17 @@ namespace BertoniAcessorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PR_VENDA_RELATORIORow AddPR_VENDA_RELATORIORow(string nomeproduto, string nomevendedor, decimal valorcompra, decimal valorvenda, decimal valorcomissao, System.DateTime datavenda, decimal valorlucro, string nomefornecedor) {
+            public PR_VENDA_RELATORIORow AddPR_VENDA_RELATORIORow(string nomefornecedor, string nomeproduto, string nomevendedor, decimal valorcompra, decimal valorvenda, decimal valorcomissao, System.DateTime datavenda, decimal valorlucro) {
                 PR_VENDA_RELATORIORow rowPR_VENDA_RELATORIORow = ((PR_VENDA_RELATORIORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        nomefornecedor,
                         nomeproduto,
                         nomevendedor,
                         valorcompra,
                         valorvenda,
                         valorcomissao,
                         datavenda,
-                        valorlucro,
-                        nomefornecedor};
+                        valorlucro};
                 rowPR_VENDA_RELATORIORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPR_VENDA_RELATORIORow);
                 return rowPR_VENDA_RELATORIORow;
@@ -6905,6 +6905,7 @@ namespace BertoniAcessorios {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnnomefornecedor = base.Columns["nomefornecedor"];
                 this.columnnomeproduto = base.Columns["nomeproduto"];
                 this.columnnomevendedor = base.Columns["nomevendedor"];
                 this.columnvalorcompra = base.Columns["valorcompra"];
@@ -6912,12 +6913,13 @@ namespace BertoniAcessorios {
                 this.columnvalorcomissao = base.Columns["valorcomissao"];
                 this.columndatavenda = base.Columns["datavenda"];
                 this.columnvalorlucro = base.Columns["valorlucro"];
-                this.columnnomefornecedor = base.Columns["nomefornecedor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnnomefornecedor = new global::System.Data.DataColumn("nomefornecedor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomefornecedor);
                 this.columnnomeproduto = new global::System.Data.DataColumn("nomeproduto", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnomeproduto);
                 this.columnnomevendedor = new global::System.Data.DataColumn("nomevendedor", typeof(string), null, global::System.Data.MappingType.Element);
@@ -6932,10 +6934,10 @@ namespace BertoniAcessorios {
                 base.Columns.Add(this.columndatavenda);
                 this.columnvalorlucro = new global::System.Data.DataColumn("valorlucro", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvalorlucro);
-                this.columnnomefornecedor = new global::System.Data.DataColumn("nomefornecedor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnomefornecedor);
-                this.columnnomeproduto.AllowDBNull = false;
-                this.columnnomeproduto.MaxLength = 200;
+                this.columnnomefornecedor.AllowDBNull = false;
+                this.columnnomefornecedor.MaxLength = 200;
+                this.columnnomeproduto.ReadOnly = true;
+                this.columnnomeproduto.MaxLength = 211;
                 this.columnnomevendedor.AllowDBNull = false;
                 this.columnnomevendedor.MaxLength = 200;
                 this.columnvalorcompra.AllowDBNull = false;
@@ -6943,8 +6945,6 @@ namespace BertoniAcessorios {
                 this.columnvalorcomissao.AllowDBNull = false;
                 this.columndatavenda.AllowDBNull = false;
                 this.columnvalorlucro.ReadOnly = true;
-                this.columnnomefornecedor.AllowDBNull = false;
-                this.columnnomefornecedor.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8940,9 +8940,25 @@ namespace BertoniAcessorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string nomefornecedor {
+                get {
+                    return ((string)(this[this.tablePR_VENDA_RELATORIO.nomefornecedorColumn]));
+                }
+                set {
+                    this[this.tablePR_VENDA_RELATORIO.nomefornecedorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string nomeproduto {
                 get {
-                    return ((string)(this[this.tablePR_VENDA_RELATORIO.nomeprodutoColumn]));
+                    try {
+                        return ((string)(this[this.tablePR_VENDA_RELATORIO.nomeprodutoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'nomeproduto\' na tabela \'PR_VENDA_RELATORIO\' é DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablePR_VENDA_RELATORIO.nomeprodutoColumn] = value;
@@ -9022,13 +9038,14 @@ namespace BertoniAcessorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string nomefornecedor {
-                get {
-                    return ((string)(this[this.tablePR_VENDA_RELATORIO.nomefornecedorColumn]));
-                }
-                set {
-                    this[this.tablePR_VENDA_RELATORIO.nomefornecedorColumn] = value;
-                }
+            public bool IsnomeprodutoNull() {
+                return this.IsNull(this.tablePR_VENDA_RELATORIO.nomeprodutoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetnomeprodutoNull() {
+                this[this.tablePR_VENDA_RELATORIO.nomeprodutoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14528,6 +14545,7 @@ SELECT id, nome, porcentagem, ativo, dtinclusao, dtalteracao FROM vendedor WHERE
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "PR_VENDA_RELATORIO";
+            tableMapping.ColumnMappings.Add("nomefornecedor", "nomefornecedor");
             tableMapping.ColumnMappings.Add("nomeproduto", "nomeproduto");
             tableMapping.ColumnMappings.Add("nomevendedor", "nomevendedor");
             tableMapping.ColumnMappings.Add("valorcompra", "valorcompra");
@@ -14535,7 +14553,6 @@ SELECT id, nome, porcentagem, ativo, dtinclusao, dtalteracao FROM vendedor WHERE
             tableMapping.ColumnMappings.Add("valorcomissao", "valorcomissao");
             tableMapping.ColumnMappings.Add("datavenda", "datavenda");
             tableMapping.ColumnMappings.Add("valorlucro", "valorlucro");
-            tableMapping.ColumnMappings.Add("nomefornecedor", "nomefornecedor");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -14555,14 +14572,42 @@ SELECT id, nome, porcentagem, ativo, dtinclusao, dtalteracao FROM vendedor WHERE
             this._commandCollection[0].CommandText = "dbo.PR_VENDA_RELATORIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idFornecedor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idVendedor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProduto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoRelatorio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BertoniAcessoriosDataSet.PR_VENDA_RELATORIODataTable dataTable) {
+        public virtual int Fill(BertoniAcessoriosDataSet.PR_VENDA_RELATORIODataTable dataTable, global::System.Nullable<int> idFornecedor, global::System.Nullable<int> idVendedor, global::System.Nullable<int> idProduto, global::System.Nullable<int> tipoRelatorio) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idFornecedor.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idFornecedor.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idVendedor.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idVendedor.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((idProduto.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(idProduto.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((tipoRelatorio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(tipoRelatorio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -14574,8 +14619,32 @@ SELECT id, nome, porcentagem, ativo, dtinclusao, dtalteracao FROM vendedor WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BertoniAcessoriosDataSet.PR_VENDA_RELATORIODataTable GetData() {
+        public virtual BertoniAcessoriosDataSet.PR_VENDA_RELATORIODataTable GetData(global::System.Nullable<int> idFornecedor, global::System.Nullable<int> idVendedor, global::System.Nullable<int> idProduto, global::System.Nullable<int> tipoRelatorio) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idFornecedor.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idFornecedor.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idVendedor.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idVendedor.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((idProduto.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(idProduto.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((tipoRelatorio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(tipoRelatorio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             BertoniAcessoriosDataSet.PR_VENDA_RELATORIODataTable dataTable = new BertoniAcessoriosDataSet.PR_VENDA_RELATORIODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

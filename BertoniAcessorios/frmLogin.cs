@@ -15,6 +15,8 @@ namespace BertoniAcessorios
         public frmLogin()
         {
             InitializeComponent();
+
+            this.lblVersao.Text = String.Format("Versão: {0}", System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString());
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

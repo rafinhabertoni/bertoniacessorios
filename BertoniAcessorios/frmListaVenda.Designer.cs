@@ -40,6 +40,8 @@
             this.lblVendedor = new System.Windows.Forms.Label();
             this.btnNovo = new System.Windows.Forms.Button();
             this.dgVenda = new System.Windows.Forms.DataGridView();
+            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
+            this.lblFornecedor = new System.Windows.Forms.Label();
             this.nomevendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomefornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeproduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +55,6 @@
             this.dataalteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
-            this.lblFornecedor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgVenda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,7 +154,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(928, 521);
+            this.btnNovo.Location = new System.Drawing.Point(928, 646);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 23);
             this.btnNovo.TabIndex = 44;
@@ -184,9 +184,27 @@
             this.dgVenda.Location = new System.Drawing.Point(18, 293);
             this.dgVenda.Name = "dgVenda";
             this.dgVenda.ReadOnly = true;
-            this.dgVenda.Size = new System.Drawing.Size(985, 212);
+            this.dgVenda.Size = new System.Drawing.Size(985, 335);
             this.dgVenda.TabIndex = 45;
             this.dgVenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgVenda_CellContentClick);
+            // 
+            // cmbFornecedor
+            // 
+            this.cmbFornecedor.FormattingEnabled = true;
+            this.cmbFornecedor.Location = new System.Drawing.Point(96, 100);
+            this.cmbFornecedor.Name = "cmbFornecedor";
+            this.cmbFornecedor.Size = new System.Drawing.Size(214, 21);
+            this.cmbFornecedor.TabIndex = 47;
+            this.cmbFornecedor.SelectedIndexChanged += new System.EventHandler(this.cmbFornecedor_SelectedIndexChanged);
+            // 
+            // lblFornecedor
+            // 
+            this.lblFornecedor.AutoSize = true;
+            this.lblFornecedor.Location = new System.Drawing.Point(15, 103);
+            this.lblFornecedor.Name = "lblFornecedor";
+            this.lblFornecedor.Size = new System.Drawing.Size(61, 13);
+            this.lblFornecedor.TabIndex = 46;
+            this.lblFornecedor.Text = "Fornecedor";
             // 
             // nomevendedor
             // 
@@ -228,7 +246,7 @@
             // 
             // datavenda
             // 
-            this.datavenda.DataPropertyName = "datainclusao";
+            this.datavenda.DataPropertyName = "datavenda";
             this.datavenda.HeaderText = "datavenda";
             this.datavenda.Name = "datavenda";
             this.datavenda.ReadOnly = true;
@@ -294,29 +312,11 @@
             this.Excluir.UseColumnTextForButtonValue = true;
             this.Excluir.Width = 70;
             // 
-            // cmbFornecedor
-            // 
-            this.cmbFornecedor.FormattingEnabled = true;
-            this.cmbFornecedor.Location = new System.Drawing.Point(96, 100);
-            this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(214, 21);
-            this.cmbFornecedor.TabIndex = 47;
-            this.cmbFornecedor.SelectedIndexChanged += new System.EventHandler(this.cmbFornecedor_SelectedIndexChanged);
-            // 
-            // lblFornecedor
-            // 
-            this.lblFornecedor.AutoSize = true;
-            this.lblFornecedor.Location = new System.Drawing.Point(15, 103);
-            this.lblFornecedor.Name = "lblFornecedor";
-            this.lblFornecedor.Size = new System.Drawing.Size(61, 13);
-            this.lblFornecedor.TabIndex = 46;
-            this.lblFornecedor.Text = "Fornecedor";
-            // 
             // frmListaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 559);
+            this.ClientSize = new System.Drawing.Size(1014, 681);
             this.Controls.Add(this.cmbFornecedor);
             this.Controls.Add(this.lblFornecedor);
             this.Controls.Add(this.dgVenda);
@@ -355,6 +355,8 @@
         private System.Windows.Forms.Label lblVendedor;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.DataGridView dgVenda;
+        private System.Windows.Forms.ComboBox cmbFornecedor;
+        private System.Windows.Forms.Label lblFornecedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomevendedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomefornecedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeproduto;
@@ -368,7 +370,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataalteracao;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Excluir;
-        private System.Windows.Forms.ComboBox cmbFornecedor;
-        private System.Windows.Forms.Label lblFornecedor;
     }
 }

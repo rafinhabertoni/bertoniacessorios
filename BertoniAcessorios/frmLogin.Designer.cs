@@ -30,6 +30,7 @@
         {
             this.btnEntrar = new System.Windows.Forms.Button();
             this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.lblVersao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +54,20 @@
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
+            // lblVersao
+            // 
+            this.lblVersao.AutoSize = true;
+            this.lblVersao.Location = new System.Drawing.Point(405, 296);
+            this.lblVersao.Name = "lblVersao";
+            this.lblVersao.Size = new System.Drawing.Size(0, 13);
+            this.lblVersao.TabIndex = 2;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 315);
+            this.Controls.Add(this.lblVersao);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.imgLogo);
             this.Name = "frmLogin";
@@ -65,6 +75,7 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -72,5 +83,6 @@
 
         private System.Windows.Forms.PictureBox imgLogo;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Label lblVersao;
     }
 }

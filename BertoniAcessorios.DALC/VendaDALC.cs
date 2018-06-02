@@ -27,12 +27,14 @@ namespace BertoniAcessorios.DALC
                 command.Parameters.Add(new SqlParameter("@IdProduto", SqlDbType.Int, 0, "IdProduto"));
                 command.Parameters.Add(new SqlParameter("@ValorVenda", SqlDbType.Decimal, 16, "ValorVenda"));
                 command.Parameters.Add(new SqlParameter("@ValorComissao", SqlDbType.Decimal, 16, "ValorComissao"));
+                command.Parameters.Add(new SqlParameter("@DataVenda", SqlDbType.DateTime, 16, "DataVenda"));
 
                 command.Parameters["@Id"].Value = vendaBE.Id;
                 command.Parameters["@IdVendedor"].Value = vendaBE.IdVendedor;
                 command.Parameters["@IdProduto"].Value = vendaBE.IdProduto;
                 command.Parameters["@ValorVenda"].Value = vendaBE.ValorVenda;
                 command.Parameters["@ValorComissao"].Value = vendaBE.ValorComissao;
+                command.Parameters["@DataVenda"].Value = vendaBE.DataVenda;
 
                 int id = command.ExecuteNonQuery();
             }
@@ -89,6 +91,7 @@ namespace BertoniAcessorios.DALC
                     vendaRetornoBE.CodigoNomeProduto = reader["CodigoNomeProduto"].ToString();
                     vendaRetornoBE.IdFornecedor = Convert.ToInt32(reader["idfornecedor"]);
                     vendaRetornoBE.NomeFornecedor = reader["NomeFornecedor"].ToString();
+                    vendaRetornoBE.DataVenda = Convert.ToDateTime(reader["dtvenda"]);
 
                     listaVendaBE.Add(vendaRetornoBE);
                 }
@@ -143,6 +146,7 @@ namespace BertoniAcessorios.DALC
                     vendaRetornoBE.CodigoNomeProduto = reader["CodigoNomeProduto"].ToString();
                     vendaRetornoBE.IdFornecedor = Convert.ToInt32(reader["idfornecedor"]);
                     vendaRetornoBE.NomeFornecedor = reader["NomeFornecedor"].ToString();
+                    vendaRetornoBE.DataVenda = Convert.ToDateTime(reader["dtvenda"]);
                 }
 
                 reader.Close();
