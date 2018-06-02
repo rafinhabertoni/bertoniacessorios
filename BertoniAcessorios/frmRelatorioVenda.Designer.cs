@@ -31,10 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.pRVENDARELATORIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bertoniAcessoriosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bertoniAcessoriosDataSet = new BertoniAcessorios.BertoniAcessoriosDataSet();
             this.rdlVenda = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.pR_VENDA_RELATORIOTableAdapter = new BertoniAcessorios.BertoniAcessoriosDataSetTableAdapters.PR_VENDA_RELATORIOTableAdapter();
             this.cmbFornecedor = new System.Windows.Forms.ComboBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.cmbVendedor = new System.Windows.Forms.ComboBox();
@@ -42,12 +39,13 @@
             this.lblProduto = new System.Windows.Forms.Label();
             this.lblVendedor = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.cmbTipoRelatorio = new System.Windows.Forms.ComboBox();
-            this.lblTipoRelatorio = new System.Windows.Forms.Label();
             this.cmbMes = new System.Windows.Forms.ComboBox();
             this.lblMes = new System.Windows.Forms.Label();
             this.cmbAno = new System.Windows.Forms.ComboBox();
             this.lblAno = new System.Windows.Forms.Label();
+            this.bertoniAcessoriosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bertoniAcessoriosDataSet = new BertoniAcessorios.BertoniAcessoriosDataSet();
+            this.pR_VENDA_RELATORIOTableAdapter = new BertoniAcessorios.BertoniAcessoriosDataSetTableAdapters.PR_VENDA_RELATORIOTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pRVENDARELATORIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bertoniAcessoriosDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bertoniAcessoriosDataSet)).BeginInit();
@@ -57,16 +55,6 @@
             // 
             this.pRVENDARELATORIOBindingSource.DataMember = "PR_VENDA_RELATORIO";
             this.pRVENDARELATORIOBindingSource.DataSource = this.bertoniAcessoriosDataSetBindingSource;
-            // 
-            // bertoniAcessoriosDataSetBindingSource
-            // 
-            this.bertoniAcessoriosDataSetBindingSource.DataSource = this.bertoniAcessoriosDataSet;
-            this.bertoniAcessoriosDataSetBindingSource.Position = 0;
-            // 
-            // bertoniAcessoriosDataSet
-            // 
-            this.bertoniAcessoriosDataSet.DataSetName = "BertoniAcessoriosDataSet";
-            this.bertoniAcessoriosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rdlVenda
             // 
@@ -79,10 +67,6 @@
             this.rdlVenda.ServerReport.BearerToken = null;
             this.rdlVenda.Size = new System.Drawing.Size(1217, 504);
             this.rdlVenda.TabIndex = 0;
-            // 
-            // pR_VENDA_RELATORIOTableAdapter
-            // 
-            this.pR_VENDA_RELATORIOTableAdapter.ClearBeforeFill = true;
             // 
             // cmbFornecedor
             // 
@@ -139,33 +123,13 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(659, 110);
+            this.btnPesquisar.Location = new System.Drawing.Point(338, 110);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 54;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // cmbTipoRelatorio
-            // 
-            this.cmbTipoRelatorio.FormattingEnabled = true;
-            this.cmbTipoRelatorio.Items.AddRange(new object[] {
-            "Dados",
-            "Gráfico"});
-            this.cmbTipoRelatorio.Location = new System.Drawing.Point(507, 110);
-            this.cmbTipoRelatorio.Name = "cmbTipoRelatorio";
-            this.cmbTipoRelatorio.Size = new System.Drawing.Size(131, 21);
-            this.cmbTipoRelatorio.TabIndex = 56;
-            // 
-            // lblTipoRelatorio
-            // 
-            this.lblTipoRelatorio.AutoSize = true;
-            this.lblTipoRelatorio.Location = new System.Drawing.Point(426, 113);
-            this.lblTipoRelatorio.Name = "lblTipoRelatorio";
-            this.lblTipoRelatorio.Size = new System.Drawing.Size(73, 13);
-            this.lblTipoRelatorio.TabIndex = 55;
-            this.lblTipoRelatorio.Text = "Tipo Relatório";
             // 
             // cmbMes
             // 
@@ -224,6 +188,20 @@
             this.lblAno.TabIndex = 59;
             this.lblAno.Text = "Ano";
             // 
+            // bertoniAcessoriosDataSetBindingSource
+            // 
+            this.bertoniAcessoriosDataSetBindingSource.DataSource = this.bertoniAcessoriosDataSet;
+            this.bertoniAcessoriosDataSetBindingSource.Position = 0;
+            // 
+            // bertoniAcessoriosDataSet
+            // 
+            this.bertoniAcessoriosDataSet.DataSetName = "BertoniAcessoriosDataSet";
+            this.bertoniAcessoriosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pR_VENDA_RELATORIOTableAdapter
+            // 
+            this.pR_VENDA_RELATORIOTableAdapter.ClearBeforeFill = true;
+            // 
             // frmRelatorioVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,8 +211,6 @@
             this.Controls.Add(this.lblAno);
             this.Controls.Add(this.cmbMes);
             this.Controls.Add(this.lblMes);
-            this.Controls.Add(this.cmbTipoRelatorio);
-            this.Controls.Add(this.lblTipoRelatorio);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.cmbFornecedor);
             this.Controls.Add(this.lblFornecedor);
@@ -269,8 +245,6 @@
         private System.Windows.Forms.Label lblProduto;
         private System.Windows.Forms.Label lblVendedor;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.ComboBox cmbTipoRelatorio;
-        private System.Windows.Forms.Label lblTipoRelatorio;
         private System.Windows.Forms.ComboBox cmbMes;
         private System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.ComboBox cmbAno;

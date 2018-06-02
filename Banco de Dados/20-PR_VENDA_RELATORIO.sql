@@ -12,7 +12,6 @@ CREATE PROCEDURE dbo.PR_VENDA_RELATORIO
 	@idFornecedor INT = NULL,
 	@idVendedor INT = NULL,
 	@idProduto INT = NULL,
-	@tipoRelatorio INT = NULL,
 	@mes INT = NULL,
 	@ano INT = NULL
 )
@@ -39,7 +38,8 @@ AS
          WHEN 10 THEN 'Outubro' + '/' + CONVERT(varchar(10), DATEPART(YEAR, dtvenda))
          WHEN 11 THEN 'Novembro' + '/' + CONVERT(varchar(10), DATEPART(YEAR, dtvenda))
          WHEN 12 THEN 'Dezembro' + '/' + CONVERT(varchar(10), DATEPART(YEAR, dtvenda))
-       END AS mes
+       END AS mes,
+	   CONVERT(varchar(10), DATEPART(MONTH, dtvenda)) + CONVERT(varchar(10), DATEPART(YEAR, dtvenda)) as ordem
 	FROM
 		venda v
 		INNER JOIN produto p ON p.id = v.idproduto
@@ -54,6 +54,6 @@ AS
 		AND (p.id = @idProduto OR @idProduto IS NULL)
 		AND (DATEPART(MONTH, dtvenda) = @mes OR @mes IS NULL)
 		AND (DATEPART(YEAR, dtvenda) = @ano OR @ano IS NULL)
-	ORDER by mes
+	ORDER by mes 
 
 GO
