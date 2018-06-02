@@ -20,13 +20,18 @@ namespace BertoniAcessorios
             InitializeComponent();
             this.CarregarComboFornecedor();
             this.CarregarComboVendedor();
+            this.cmbVendedor.SelectedIndex = 0;
+            this.cmbFornecedor.SelectedIndex = 0;
+            this.cmbProduto.SelectedIndex = 0;
             this.cmbTipoRelatorio.SelectedIndex = 0;
+            this.cmbMes.SelectedIndex = 0;
+            this.cmbAno.SelectedIndex = 0;
         }
 
         private void frmRelatorioVenda_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'bertoniAcessoriosDataSet.PR_VENDA_RELATORIO'. Você pode movê-la ou removê-la conforme necessário.
-            this.pR_VENDA_RELATORIOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO, null, null, null, null);
+            this.pR_VENDA_RELATORIOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO, null, null, null, null, null, null);
             /*ReportDataSource datasource = new ReportDataSource("dsvenda", bertoniAcessoriosDataSet.Tables[0]);
             this.rdlVenda.LocalReport.DataSources.Clear();
             this.rdlVenda.LocalReport.DataSources.Add(datasource);*/
@@ -91,22 +96,32 @@ namespace BertoniAcessorios
             int? idProduto = null;
             int? idFornecedor = null;
             int? idVendedor = null;
-            if (this.cmbProduto.SelectedIndex != 0)
+            int? mes = null;
+            int? ano = null;
+            if (this.cmbProduto.SelectedIndex > 0)
             {
                 idProduto = Convert.ToInt32(((BertoniAcessorios.BE.ProdutoBE)this.cmbProduto.SelectedItem).Id);
             }
             ReportParameter parametroVendedor = new ReportParameter();
-            if (this.cmbVendedor.SelectedIndex != 0)
+            if (this.cmbVendedor.SelectedIndex > 0)
             {
                 idVendedor = Convert.ToInt32(((BertoniAcessorios.BE.VendedorBE)this.cmbVendedor.SelectedItem).Id);
             }
             ReportParameter parametroFornecedor = new ReportParameter();
-            if (this.cmbFornecedor.SelectedIndex != 0)
+            if (this.cmbFornecedor.SelectedIndex > 0)
             {
                 idFornecedor = Convert.ToInt32(((BertoniAcessorios.BE.FornecedorBE)this.cmbFornecedor.SelectedItem).Id);
             }
+            if (this.cmbMes.SelectedIndex > 0)
+            {
+                mes = this.cmbMes.SelectedIndex;
+            }
+            if (this.cmbAno.SelectedIndex > 0)
+            {
+                ano = Convert.ToInt32(this.cmbAno.SelectedItem);
+            }
 
-            this.pR_VENDA_RELATORIOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO, idFornecedor, idVendedor, idProduto, null);
+            this.pR_VENDA_RELATORIOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO, idFornecedor, idVendedor, idProduto, null, mes, ano);
 
             /*ReportParameter parametroProduto = new ReportParameter();
             if (this.cmbProduto.SelectedIndex != 0)
