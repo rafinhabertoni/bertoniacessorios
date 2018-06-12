@@ -32,7 +32,7 @@
             this.lblProduto = new System.Windows.Forms.Label();
             this.lblVendas = new System.Windows.Forms.Label();
             this.lblOutrasDespesas = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOutrasDespesas = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
@@ -80,15 +80,16 @@
             this.lblOutrasDespesas.TabIndex = 9;
             this.lblOutrasDespesas.Text = "Outras Despesas";
             // 
-            // button1
+            // btnOutrasDespesas
             // 
-            this.button1.BackgroundImage = global::BertoniAcessorios.Properties.Resources.outras_despesas;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(393, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 83);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOutrasDespesas.BackgroundImage = global::BertoniAcessorios.Properties.Resources.outras_despesas;
+            this.btnOutrasDespesas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOutrasDespesas.Location = new System.Drawing.Point(393, 46);
+            this.btnOutrasDespesas.Name = "btnOutrasDespesas";
+            this.btnOutrasDespesas.Size = new System.Drawing.Size(96, 83);
+            this.btnOutrasDespesas.TabIndex = 8;
+            this.btnOutrasDespesas.UseVisualStyleBackColor = true;
+            this.btnOutrasDespesas.Click += new System.EventHandler(this.btnOutrasDespesas_Click);
             // 
             // btnVendas
             // 
@@ -152,7 +153,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRelatorioVendas);
             this.Controls.Add(this.lblOutrasDespesas);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOutrasDespesas);
             this.Controls.Add(this.lblVendas);
             this.Controls.Add(this.btnVendas);
             this.Controls.Add(this.lblProduto);
@@ -177,7 +178,7 @@
         private System.Windows.Forms.Label lblVendas;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Label lblOutrasDespesas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOutrasDespesas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRelatorioVendas;
     }

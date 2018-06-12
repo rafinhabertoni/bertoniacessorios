@@ -84,6 +84,12 @@
     <Compile Include="frmListaFornecedor.Designer.cs">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaOutrasDespesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaOutrasDespesas.Designer.cs">
+      <DependentUpon>frmListaOutrasDespesas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaFornecedor.resx">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaOutrasDespesas.resx">
+      <DependentUpon>frmListaOutrasDespesas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaProduto.resx">
       <DependentUpon>frmListaProduto.cs</DependentUpon>

@@ -45,5 +45,11 @@ namespace BertoniAcessorios
             frmRelatorioVenda frmRelatorioVenda = new frmRelatorioVenda();
             frmRelatorioVenda.Show();
         }
+
+        private void btnOutrasDespesas_Click(object sender, EventArgs e)
+        {
+            frmListaOutrasDespesas frmListaOutrasDespesas = new frmListaOutrasDespesas();
+            frmListaOutrasDespesas.Show();
+        }
     }
 }

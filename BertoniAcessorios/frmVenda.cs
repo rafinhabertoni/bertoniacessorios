@@ -68,11 +68,24 @@ namespace BertoniAcessorios
             produtoBE.IdFornecedor = idFornecedor;
             List<ProdutoBE> listaTipoProdutoBE = produtoBO.Listar(produtoBE);
 
+            VendaBO vendaBO = new VendaBO();
+            VendaBE vendaBE = new VendaBE();
+            vendaBE.Ativo = true;
+            vendaBE.IdFornecedor = idFornecedor;
+            List<VendaBE> listaVendaBE = vendaBO.Listar(vendaBE);
+            if (id.HasValue)
+            {
+                listaVendaBE.RemoveAll(d => d.Id.Value == id.Value);
+            }
+
             cmbProduto.Items.Clear();
             cmbProduto.Items.Add("Selecione");
             foreach (ProdutoBE produtoRetornoBE in listaTipoProdutoBE)
             {
-                cmbProduto.Items.Add(produtoRetornoBE);
+                if (!listaVendaBE.Exists(d => d.IdProduto == produtoRetornoBE.Id.Value))
+                {
+                    cmbProduto.Items.Add(produtoRetornoBE);
+                }
             }
             cmbProduto.DisplayMember = "CodigoNome";
             cmbProduto.ValueMember = "Id";

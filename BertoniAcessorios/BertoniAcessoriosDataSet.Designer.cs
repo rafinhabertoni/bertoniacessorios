@@ -6742,6 +6742,16 @@ namespace BertoniAcessorios {
             
             private global::System.Data.DataColumn columnordem;
             
+            private global::System.Data.DataColumn columnidtipoproduto;
+            
+            private global::System.Data.DataColumn columntipoproduto;
+            
+            private global::System.Data.DataColumn columnquantidadeprodutos;
+            
+            private global::System.Data.DataColumn columnquantidadeprodutosvendidos;
+            
+            private global::System.Data.DataColumn columnquantidadeprodutosnaovenddos;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PR_VENDA_RELATORIODataTable() {
@@ -6857,6 +6867,46 @@ namespace BertoniAcessorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn idtipoprodutoColumn {
+                get {
+                    return this.columnidtipoproduto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn tipoprodutoColumn {
+                get {
+                    return this.columntipoproduto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn quantidadeprodutosColumn {
+                get {
+                    return this.columnquantidadeprodutos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn quantidadeprodutosvendidosColumn {
+                get {
+                    return this.columnquantidadeprodutosvendidos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn quantidadeprodutosnaovenddosColumn {
+                get {
+                    return this.columnquantidadeprodutosnaovenddos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6892,7 +6942,7 @@ namespace BertoniAcessorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PR_VENDA_RELATORIORow AddPR_VENDA_RELATORIORow(string nomefornecedor, string nomeproduto, string nomevendedor, decimal valorcompra, decimal valorvenda, decimal valorcomissao, System.DateTime datavenda, decimal valorlucro, string mes, string ordem) {
+            public PR_VENDA_RELATORIORow AddPR_VENDA_RELATORIORow(string nomefornecedor, string nomeproduto, string nomevendedor, decimal valorcompra, decimal valorvenda, decimal valorcomissao, System.DateTime datavenda, decimal valorlucro, string mes, string ordem, int idtipoproduto, string tipoproduto, int quantidadeprodutos, int quantidadeprodutosvendidos, int quantidadeprodutosnaovenddos) {
                 PR_VENDA_RELATORIORow rowPR_VENDA_RELATORIORow = ((PR_VENDA_RELATORIORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nomefornecedor,
@@ -6904,7 +6954,12 @@ namespace BertoniAcessorios {
                         datavenda,
                         valorlucro,
                         mes,
-                        ordem};
+                        ordem,
+                        idtipoproduto,
+                        tipoproduto,
+                        quantidadeprodutos,
+                        quantidadeprodutosvendidos,
+                        quantidadeprodutosnaovenddos};
                 rowPR_VENDA_RELATORIORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPR_VENDA_RELATORIORow);
                 return rowPR_VENDA_RELATORIORow;
@@ -6937,6 +6992,11 @@ namespace BertoniAcessorios {
                 this.columnvalorlucro = base.Columns["valorlucro"];
                 this.columnmes = base.Columns["mes"];
                 this.columnordem = base.Columns["ordem"];
+                this.columnidtipoproduto = base.Columns["idtipoproduto"];
+                this.columntipoproduto = base.Columns["tipoproduto"];
+                this.columnquantidadeprodutos = base.Columns["quantidadeprodutos"];
+                this.columnquantidadeprodutosvendidos = base.Columns["quantidadeprodutosvendidos"];
+                this.columnquantidadeprodutosnaovenddos = base.Columns["quantidadeprodutosnaovenddos"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6962,6 +7022,16 @@ namespace BertoniAcessorios {
                 base.Columns.Add(this.columnmes);
                 this.columnordem = new global::System.Data.DataColumn("ordem", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnordem);
+                this.columnidtipoproduto = new global::System.Data.DataColumn("idtipoproduto", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidtipoproduto);
+                this.columntipoproduto = new global::System.Data.DataColumn("tipoproduto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipoproduto);
+                this.columnquantidadeprodutos = new global::System.Data.DataColumn("quantidadeprodutos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantidadeprodutos);
+                this.columnquantidadeprodutosvendidos = new global::System.Data.DataColumn("quantidadeprodutosvendidos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantidadeprodutosvendidos);
+                this.columnquantidadeprodutosnaovenddos = new global::System.Data.DataColumn("quantidadeprodutosnaovenddos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantidadeprodutosnaovenddos);
                 this.columnnomefornecedor.AllowDBNull = false;
                 this.columnnomefornecedor.MaxLength = 200;
                 this.columnnomeproduto.ReadOnly = true;
@@ -6977,6 +7047,12 @@ namespace BertoniAcessorios {
                 this.columnmes.MaxLength = 20;
                 this.columnordem.ReadOnly = true;
                 this.columnordem.MaxLength = 20;
+                this.columnidtipoproduto.AllowDBNull = false;
+                this.columntipoproduto.AllowDBNull = false;
+                this.columntipoproduto.MaxLength = 200;
+                this.columnquantidadeprodutos.ReadOnly = true;
+                this.columnquantidadeprodutosvendidos.ReadOnly = true;
+                this.columnquantidadeprodutosnaovenddos.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9102,6 +9178,78 @@ namespace BertoniAcessorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int idtipoproduto {
+                get {
+                    return ((int)(this[this.tablePR_VENDA_RELATORIO.idtipoprodutoColumn]));
+                }
+                set {
+                    this[this.tablePR_VENDA_RELATORIO.idtipoprodutoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string tipoproduto {
+                get {
+                    return ((string)(this[this.tablePR_VENDA_RELATORIO.tipoprodutoColumn]));
+                }
+                set {
+                    this[this.tablePR_VENDA_RELATORIO.tipoprodutoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int quantidadeprodutos {
+                get {
+                    try {
+                        return ((int)(this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'quantidadeprodutos\' na tabela \'PR_VENDA_RELATORIO\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int quantidadeprodutosvendidos {
+                get {
+                    try {
+                        return ((int)(this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosvendidosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'quantidadeprodutosvendidos\' na tabela \'PR_VENDA_RELATORIO\' é D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosvendidosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int quantidadeprodutosnaovenddos {
+                get {
+                    try {
+                        return ((int)(this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosnaovenddosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'quantidadeprodutosnaovenddos\' na tabela \'PR_VENDA_RELATORIO\' é" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosnaovenddosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsnomeprodutoNull() {
                 return this.IsNull(this.tablePR_VENDA_RELATORIO.nomeprodutoColumn);
             }
@@ -9146,6 +9294,42 @@ namespace BertoniAcessorios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetordemNull() {
                 this[this.tablePR_VENDA_RELATORIO.ordemColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsquantidadeprodutosNull() {
+                return this.IsNull(this.tablePR_VENDA_RELATORIO.quantidadeprodutosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetquantidadeprodutosNull() {
+                this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsquantidadeprodutosvendidosNull() {
+                return this.IsNull(this.tablePR_VENDA_RELATORIO.quantidadeprodutosvendidosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetquantidadeprodutosvendidosNull() {
+                this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosvendidosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsquantidadeprodutosnaovenddosNull() {
+                return this.IsNull(this.tablePR_VENDA_RELATORIO.quantidadeprodutosnaovenddosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetquantidadeprodutosnaovenddosNull() {
+                this[this.tablePR_VENDA_RELATORIO.quantidadeprodutosnaovenddosColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -14643,6 +14827,11 @@ SELECT id, nome, porcentagem, ativo, dtinclusao, dtalteracao FROM vendedor WHERE
             tableMapping.ColumnMappings.Add("valorlucro", "valorlucro");
             tableMapping.ColumnMappings.Add("mes", "mes");
             tableMapping.ColumnMappings.Add("ordem", "ordem");
+            tableMapping.ColumnMappings.Add("idtipoproduto", "idtipoproduto");
+            tableMapping.ColumnMappings.Add("tipoproduto", "tipoproduto");
+            tableMapping.ColumnMappings.Add("quantidadeprodutos", "quantidadeprodutos");
+            tableMapping.ColumnMappings.Add("quantidadeprodutosvendidos", "quantidadeprodutosvendidos");
+            tableMapping.ColumnMappings.Add("quantidadeprodutosnaovenddos", "quantidadeprodutosnaovenddos");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
