@@ -40,7 +40,7 @@ namespace BertoniAcessorios
             this.txtValorVenda.Text = produtoBE.ValorVenda.ToString();
             this.txtDataCompra.Text = produtoBE.DataCompra.Value.ToString("dd/MM/yyyy");
             this.cmbTipoProduto.SelectedIndex = this.cmbTipoProduto.FindString(produtoBE.TipoProduto);
-            this.cmbFornecedor.SelectedIndex = this.cmbFornecedor.FindString(produtoBE.NomeFornecedor);
+            this.cmbFornecedor.SelectedIndex = this.cmbFornecedor.FindString(produtoBE.CodigoNomeFornecedor);
         }
 
         public void CarregarComboTipoProduto()
@@ -70,7 +70,7 @@ namespace BertoniAcessorios
             {
                 cmbFornecedor.Items.Add(retornoFornecedorBE);
             }
-            cmbFornecedor.DisplayMember = "Nome";
+            cmbFornecedor.DisplayMember = "CodigoNome";
             cmbFornecedor.ValueMember = "Id";
             cmbFornecedor.SelectedIndex = 0;
         }

@@ -28,7 +28,8 @@ AS
 		p.codigo + '-' + p.nome as codigonomeproduto,
 		p.idfornecedor,
 		f.nome as nomefornecedor,
-		v.dtvenda
+		v.dtvenda,
+		f.codigo + '-' + f.nome as codigonomefornecedor
 	FROM
 		venda v
 		INNER JOIN produto p ON p.id = v.idproduto

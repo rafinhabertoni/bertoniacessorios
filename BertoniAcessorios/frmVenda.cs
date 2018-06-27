@@ -38,7 +38,7 @@ namespace BertoniAcessorios
             this.txtValorComissao.Text = vendaBE.ValorComissao.ToString();
             this.txtValorVenda.Text = vendaBE.ValorVenda.ToString();
             this.cmbVendedor.SelectedIndex = this.cmbVendedor.FindString(vendaBE.NomeVendedor);
-            this.cmbFornecedor.SelectedIndex = this.cmbFornecedor.FindString(vendaBE.NomeFornecedor);
+            this.cmbFornecedor.SelectedIndex = this.cmbFornecedor.FindString(vendaBE.CodigoNomeFornecedor);
             this.cmbProduto.SelectedIndex = this.cmbProduto.FindString(vendaBE.CodigoNomeProduto);
             this.txtDataVenda.Text = vendaBE.DataVenda.Value.ToString("dd/MM/yyyy");
         }
@@ -55,7 +55,7 @@ namespace BertoniAcessorios
             {
                 cmbFornecedor.Items.Add(retornoFornecedorBE);
             }
-            cmbFornecedor.DisplayMember = "Nome";
+            cmbFornecedor.DisplayMember = "CodigoNome";
             cmbFornecedor.ValueMember = "Id";
             cmbFornecedor.SelectedIndex = 0;
         }

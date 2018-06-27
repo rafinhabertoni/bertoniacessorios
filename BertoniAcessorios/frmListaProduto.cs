@@ -64,7 +64,7 @@ namespace BertoniAcessorios
             {
                 cmbFornecedor.Items.Add(retornoFornecedorBE);
             }
-            cmbFornecedor.DisplayMember = "Nome";
+            cmbFornecedor.DisplayMember = "CodigoNome";
             cmbFornecedor.ValueMember = "Id";
             cmbFornecedor.SelectedIndex = 0;
         }

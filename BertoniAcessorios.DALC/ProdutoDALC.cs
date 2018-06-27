@@ -152,6 +152,7 @@ namespace BertoniAcessorios.DALC
                         produtoRetornoBE.DataAlteracao = Convert.ToDateTime(reader["dtalteracao"]);
                     }
                     produtoRetornoBE.CodigoNome = reader["CodigoNome"].ToString();
+                    produtoRetornoBE.CodigoNomeFornecedor = reader["CodigoNomeFornecedor"].ToString();
                 }
 
                 reader.Close();

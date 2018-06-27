@@ -30,7 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.pRVENDARELATORIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bertoniAcessoriosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bertoniAcessoriosDataSet = new BertoniAcessorios.BertoniAcessoriosDataSet();
             this.rdlVenda = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cmbFornecedor = new System.Windows.Forms.ComboBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
@@ -43,12 +46,13 @@
             this.lblMes = new System.Windows.Forms.Label();
             this.cmbAno = new System.Windows.Forms.ComboBox();
             this.lblAno = new System.Windows.Forms.Label();
-            this.bertoniAcessoriosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bertoniAcessoriosDataSet = new BertoniAcessorios.BertoniAcessoriosDataSet();
             this.pR_VENDA_RELATORIOTableAdapter = new BertoniAcessorios.BertoniAcessoriosDataSetTableAdapters.PR_VENDA_RELATORIOTableAdapter();
+            this.pR_VENDA_RELATORIO_GRAFICOTableAdapter = new BertoniAcessorios.BertoniAcessoriosDataSetTableAdapters.PR_VENDA_RELATORIO_GRAFICOTableAdapter();
+            this.pRVENDARELATORIOGRAFICOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pRVENDARELATORIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bertoniAcessoriosDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bertoniAcessoriosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRVENDARELATORIOGRAFICOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pRVENDARELATORIOBindingSource
@@ -56,11 +60,24 @@
             this.pRVENDARELATORIOBindingSource.DataMember = "PR_VENDA_RELATORIO";
             this.pRVENDARELATORIOBindingSource.DataSource = this.bertoniAcessoriosDataSetBindingSource;
             // 
+            // bertoniAcessoriosDataSetBindingSource
+            // 
+            this.bertoniAcessoriosDataSetBindingSource.DataSource = this.bertoniAcessoriosDataSet;
+            this.bertoniAcessoriosDataSetBindingSource.Position = 0;
+            // 
+            // bertoniAcessoriosDataSet
+            // 
+            this.bertoniAcessoriosDataSet.DataSetName = "BertoniAcessoriosDataSet";
+            this.bertoniAcessoriosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // rdlVenda
             // 
             reportDataSource1.Name = "dsVenda";
             reportDataSource1.Value = this.pRVENDARELATORIOBindingSource;
             this.rdlVenda.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "dsVendaGrafico";
+            reportDataSource2.Value = this.pRVENDARELATORIOGRAFICOBindingSource;
+            this.rdlVenda.LocalReport.DataSources.Add(reportDataSource2);
             this.rdlVenda.LocalReport.ReportEmbeddedResource = "BertoniAcessorios.rptVendas.rdlc";
             this.rdlVenda.Location = new System.Drawing.Point(12, 151);
             this.rdlVenda.Name = "rdlVenda";
@@ -188,19 +205,18 @@
             this.lblAno.TabIndex = 59;
             this.lblAno.Text = "Ano";
             // 
-            // bertoniAcessoriosDataSetBindingSource
-            // 
-            this.bertoniAcessoriosDataSetBindingSource.DataSource = this.bertoniAcessoriosDataSet;
-            this.bertoniAcessoriosDataSetBindingSource.Position = 0;
-            // 
-            // bertoniAcessoriosDataSet
-            // 
-            this.bertoniAcessoriosDataSet.DataSetName = "BertoniAcessoriosDataSet";
-            this.bertoniAcessoriosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pR_VENDA_RELATORIOTableAdapter
             // 
             this.pR_VENDA_RELATORIOTableAdapter.ClearBeforeFill = true;
+            // 
+            // pR_VENDA_RELATORIO_GRAFICOTableAdapter
+            // 
+            this.pR_VENDA_RELATORIO_GRAFICOTableAdapter.ClearBeforeFill = true;
+            // 
+            // pRVENDARELATORIOGRAFICOBindingSource
+            // 
+            this.pRVENDARELATORIOGRAFICOBindingSource.DataMember = "PR_VENDA_RELATORIO_GRAFICO";
+            this.pRVENDARELATORIOGRAFICOBindingSource.DataSource = this.bertoniAcessoriosDataSetBindingSource;
             // 
             // frmRelatorioVenda
             // 
@@ -226,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRVENDARELATORIOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bertoniAcessoriosDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bertoniAcessoriosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRVENDARELATORIOGRAFICOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +266,7 @@
         private System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.ComboBox cmbAno;
         private System.Windows.Forms.Label lblAno;
+        private BertoniAcessoriosDataSetTableAdapters.PR_VENDA_RELATORIO_GRAFICOTableAdapter pR_VENDA_RELATORIO_GRAFICOTableAdapter;
+        private System.Windows.Forms.BindingSource pRVENDARELATORIOGRAFICOBindingSource;
     }
 }

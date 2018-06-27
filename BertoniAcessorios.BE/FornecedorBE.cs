@@ -21,5 +21,7 @@ namespace BertoniAcessorios.BE
         public DateTime? DataAlteracao { get; set; }
 
         public bool Ativo { get; set; }
+
+        public string CodigoNome { get; set; }
     }
 }

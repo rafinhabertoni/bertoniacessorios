@@ -23,7 +23,8 @@ AS
 		codigo,
 		dtinclusao,
 		dtalteracao,
-		ativo
+		ativo,
+		codigo + '-' + nome as codigonome
 	FROM
 		fornecedor
 	WHERE

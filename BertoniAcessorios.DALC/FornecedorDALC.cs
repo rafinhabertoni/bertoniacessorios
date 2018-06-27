@@ -73,7 +73,8 @@ namespace BertoniAcessorios.DALC
                         fornecedorRetornoBE.DataAlteracao = Convert.ToDateTime(reader["dtalteracao"]);
                     }
                     fornecedorRetornoBE.Ativo = Convert.ToBoolean(reader["ativo"]);
-                    
+                    fornecedorRetornoBE.CodigoNome = reader["CodigoNome"].ToString();
+
                     listaFornecedorBE.Add(fornecedorRetornoBE);
                 }
 
@@ -114,6 +115,7 @@ namespace BertoniAcessorios.DALC
                     {
                         fornecedorRetornoBE.DataAlteracao = Convert.ToDateTime(reader["dtalteracao"]);
                     }
+                    fornecedorRetornoBE.CodigoNome = reader["CodigoNome"].ToString();
                 }
 
                 reader.Close();

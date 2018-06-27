@@ -147,6 +147,7 @@ namespace BertoniAcessorios.DALC
                     vendaRetornoBE.IdFornecedor = Convert.ToInt32(reader["idfornecedor"]);
                     vendaRetornoBE.NomeFornecedor = reader["NomeFornecedor"].ToString();
                     vendaRetornoBE.DataVenda = Convert.ToDateTime(reader["dtvenda"]);
+                    vendaRetornoBE.CodigoNomeFornecedor = reader["CodigoNomeFornecedor"].ToString();
                 }
 
                 reader.Close();

@@ -107,7 +107,7 @@
             this.cmbTipoProduto.FormattingEnabled = true;
             this.cmbTipoProduto.Location = new System.Drawing.Point(109, 159);
             this.cmbTipoProduto.Name = "cmbTipoProduto";
-            this.cmbTipoProduto.Size = new System.Drawing.Size(148, 21);
+            this.cmbTipoProduto.Size = new System.Drawing.Size(176, 21);
             this.cmbTipoProduto.TabIndex = 16;
             // 
             // lblValor
@@ -166,7 +166,7 @@
             this.cmbFornecedor.FormattingEnabled = true;
             this.cmbFornecedor.Location = new System.Drawing.Point(109, 120);
             this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(148, 21);
+            this.cmbFornecedor.Size = new System.Drawing.Size(176, 21);
             this.cmbFornecedor.TabIndex = 23;
             // 
             // txtCodigo

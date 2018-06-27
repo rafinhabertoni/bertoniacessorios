@@ -283,7 +283,7 @@
             this.cmbTipoProduto.FormattingEnabled = true;
             this.cmbTipoProduto.Location = new System.Drawing.Point(100, 140);
             this.cmbTipoProduto.Name = "cmbTipoProduto";
-            this.cmbTipoProduto.Size = new System.Drawing.Size(171, 21);
+            this.cmbTipoProduto.Size = new System.Drawing.Size(214, 21);
             this.cmbTipoProduto.TabIndex = 25;
             // 
             // cmbFornecedor
@@ -291,7 +291,7 @@
             this.cmbFornecedor.FormattingEnabled = true;
             this.cmbFornecedor.Location = new System.Drawing.Point(100, 100);
             this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(171, 21);
+            this.cmbFornecedor.Size = new System.Drawing.Size(214, 21);
             this.cmbFornecedor.TabIndex = 26;
             // 
             // lblCodigo

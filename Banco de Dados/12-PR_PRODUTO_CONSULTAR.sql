@@ -29,7 +29,8 @@ AS
 		prd.dtalteracao,
 		tp.nome as tipoproduto,
 		f.nome as nomefornecedor,
-		prd.codigo + '-' + prd.nome as CodigoNome
+		prd.codigo + '-' + prd.nome as CodigoNome,
+		f.codigo + '-' + f.nome as CodigoNomeFornecedor
 	FROM
 		produto prd
 		INNER JOIN tipoproduto tp ON tp.id = prd.idtipoproduto

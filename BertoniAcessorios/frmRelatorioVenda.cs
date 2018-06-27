@@ -31,6 +31,7 @@ namespace BertoniAcessorios
         {
             // TODO: esta linha de código carrega dados na tabela 'bertoniAcessoriosDataSet.PR_VENDA_RELATORIO'. Você pode movê-la ou removê-la conforme necessário.
             this.pR_VENDA_RELATORIOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO, null, null, null, null, null);
+            this.pR_VENDA_RELATORIO_GRAFICOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO_GRAFICO, null, null, null, null, null);
             /*ReportDataSource datasource = new ReportDataSource("dsvenda", bertoniAcessoriosDataSet.Tables[0]);
             this.rdlVenda.LocalReport.DataSources.Clear();
             this.rdlVenda.LocalReport.DataSources.Add(datasource);*/
@@ -121,6 +122,8 @@ namespace BertoniAcessorios
             }
 
             this.pR_VENDA_RELATORIOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO, idFornecedor, idVendedor, idProduto, mes, ano);
+
+            this.pR_VENDA_RELATORIO_GRAFICOTableAdapter.Fill(this.bertoniAcessoriosDataSet.PR_VENDA_RELATORIO_GRAFICO, idFornecedor, idVendedor, idProduto, mes, ano);
 
             /*ReportParameter parametroProduto = new ReportParameter();
             if (this.cmbProduto.SelectedIndex != 0)

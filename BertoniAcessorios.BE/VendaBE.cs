@@ -35,5 +35,7 @@ namespace BertoniAcessorios.BE
         public string NomeFornecedor { get; set; }
 
         public DateTime? DataVenda { get; set; }
+
+        public string CodigoNomeFornecedor { get; set; }
     }
 }

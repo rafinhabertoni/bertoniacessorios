@@ -20,7 +20,8 @@ AS
 		descricao,
 		codigo,
 		dtinclusao,
-		dtalteracao
+		dtalteracao,
+		codigo + '-' + nome as codigonome
 	FROM
 		fornecedor
 	WHERE

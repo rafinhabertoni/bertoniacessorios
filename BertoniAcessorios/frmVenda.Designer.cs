@@ -145,7 +145,7 @@
             this.cmbFornecedor.FormattingEnabled = true;
             this.cmbFornecedor.Location = new System.Drawing.Point(141, 100);
             this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(148, 21);
+            this.cmbFornecedor.Size = new System.Drawing.Size(247, 21);
             this.cmbFornecedor.TabIndex = 41;
             this.cmbFornecedor.SelectedIndexChanged += new System.EventHandler(this.cmbFornecedor_SelectedIndexChanged);
             // 

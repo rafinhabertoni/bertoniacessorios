@@ -87,6 +87,70 @@
         <rd:TableAdapterName>PR_VENDA_RELATORIOTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
+    <DataSet Name="dsVendaGrafico">
+      <Query>
+        <DataSourceName>BertoniAcessoriosDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="nomefornecedor">
+          <DataField>nomefornecedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nomeproduto">
+          <DataField>nomeproduto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nomevendedor">
+          <DataField>nomevendedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="valorcompra">
+          <DataField>valorcompra</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="valorvenda">
+          <DataField>valorvenda</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="valorcomissao">
+          <DataField>valorcomissao</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="datavenda">
+          <DataField>datavenda</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="valorlucro">
+          <DataField>valorlucro</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="mes">
+          <DataField>mes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ordem">
+          <DataField>ordem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="idtipoproduto">
+          <DataField>idtipoproduto</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="tipoproduto">
+          <DataField>tipoproduto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>BertoniAcessoriosDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Projetos\bertoniacessorios\BertoniAcessorios\BertoniAcessoriosDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>PR_VENDA_RELATORIO_GRAFICO</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>PR_VENDA_RELATORIO_GRAFICOTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -2003,7 +2067,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>dsVenda</DataSetName>
+            <DataSetName>dsVendaGrafico</DataSetName>
             <Top>6.4262cm</Top>
             <Left>0.60537cm</Left>
             <Height>7.27542cm</Height>
@@ -2364,7 +2428,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>dsVenda</DataSetName>
+            <DataSetName>dsVendaGrafico</DataSetName>
             <Top>6.4262cm</Top>
             <Left>16.05516cm</Left>
             <Height>7.27542cm</Height>
@@ -2725,7 +2789,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>dsVenda</DataSetName>
+            <DataSetName>dsVendaGrafico</DataSetName>
             <Top>14.41821cm</Top>
             <Left>0.60537cm</Left>
             <Height>7.27542cm</Height>
