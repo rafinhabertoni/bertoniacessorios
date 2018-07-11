@@ -51,5 +51,11 @@ namespace BertoniAcessorios
             frmListaOutrasDespesas frmListaOutrasDespesas = new frmListaOutrasDespesas();
             frmListaOutrasDespesas.Show();
         }
+
+        private void btnRelatorioProduto_Click(object sender, EventArgs e)
+        {
+            frmRelatorioProduto frmRelatorioProduto = new frmRelatorioProduto();
+            frmRelatorioProduto.Show();
+        }
     }
 }

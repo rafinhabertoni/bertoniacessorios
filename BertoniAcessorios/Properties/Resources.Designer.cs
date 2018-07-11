@@ -73,6 +73,16 @@ namespace BertoniAcessorios.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap erros_terceirizacao_armazenamento_860x400 {
+            get {
+                object obj = ResourceManager.GetObject("erros_terceirizacao_armazenamento-860x400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -123,9 +133,29 @@ namespace BertoniAcessorios.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Organizar_estoque {
+            get {
+                object obj = ResourceManager.GetObject("Organizar estoque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap outras_despesas {
             get {
                 object obj = ResourceManager.GetObject("outras despesas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap planilhas_para_controle_de_estoque {
+            get {
+                object obj = ResourceManager.GetObject("planilhas-para-controle-de-estoque", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

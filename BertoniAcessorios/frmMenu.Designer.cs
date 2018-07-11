@@ -32,12 +32,14 @@
             this.lblProduto = new System.Windows.Forms.Label();
             this.lblVendas = new System.Windows.Forms.Label();
             this.lblOutrasDespesas = new System.Windows.Forms.Label();
+            this.lblRelatorioVendas = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRelatorioProduto = new System.Windows.Forms.Button();
+            this.btnRelatorioVendas = new System.Windows.Forms.Button();
             this.btnOutrasDespesas = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnRelatorioVendas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFornecedor
@@ -79,6 +81,48 @@
             this.lblOutrasDespesas.Size = new System.Drawing.Size(133, 20);
             this.lblOutrasDespesas.TabIndex = 9;
             this.lblOutrasDespesas.Text = "Outras Despesas";
+            // 
+            // lblRelatorioVendas
+            // 
+            this.lblRelatorioVendas.AutoSize = true;
+            this.lblRelatorioVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelatorioVendas.Location = new System.Drawing.Point(39, 151);
+            this.lblRelatorioVendas.Name = "lblRelatorioVendas";
+            this.lblRelatorioVendas.Size = new System.Drawing.Size(86, 40);
+            this.lblRelatorioVendas.TabIndex = 11;
+            this.lblRelatorioVendas.Text = "Relatório \r\nde Vendas";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(154, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 40);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Relatório \r\nde Produtos";
+            // 
+            // btnRelatorioProduto
+            // 
+            this.btnRelatorioProduto.BackgroundImage = global::BertoniAcessorios.Properties.Resources.Organizar_estoque;
+            this.btnRelatorioProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRelatorioProduto.Location = new System.Drawing.Point(153, 194);
+            this.btnRelatorioProduto.Name = "btnRelatorioProduto";
+            this.btnRelatorioProduto.Size = new System.Drawing.Size(96, 83);
+            this.btnRelatorioProduto.TabIndex = 12;
+            this.btnRelatorioProduto.UseVisualStyleBackColor = true;
+            this.btnRelatorioProduto.Click += new System.EventHandler(this.btnRelatorioProduto_Click);
+            // 
+            // btnRelatorioVendas
+            // 
+            this.btnRelatorioVendas.BackgroundImage = global::BertoniAcessorios.Properties.Resources.RelatorioVendas;
+            this.btnRelatorioVendas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRelatorioVendas.Location = new System.Drawing.Point(34, 194);
+            this.btnRelatorioVendas.Name = "btnRelatorioVendas";
+            this.btnRelatorioVendas.Size = new System.Drawing.Size(96, 83);
+            this.btnRelatorioVendas.TabIndex = 10;
+            this.btnRelatorioVendas.UseVisualStyleBackColor = true;
+            this.btnRelatorioVendas.Click += new System.EventHandler(this.btnRelatorioVendas_Click);
             // 
             // btnOutrasDespesas
             // 
@@ -124,33 +168,14 @@
             this.btnFornecedor.UseVisualStyleBackColor = true;
             this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Relatório de Vendas";
-            // 
-            // btnRelatorioVendas
-            // 
-            this.btnRelatorioVendas.BackgroundImage = global::BertoniAcessorios.Properties.Resources.RelatorioVendas;
-            this.btnRelatorioVendas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRelatorioVendas.Location = new System.Drawing.Point(34, 174);
-            this.btnRelatorioVendas.Name = "btnRelatorioVendas";
-            this.btnRelatorioVendas.Size = new System.Drawing.Size(96, 83);
-            this.btnRelatorioVendas.TabIndex = 10;
-            this.btnRelatorioVendas.UseVisualStyleBackColor = true;
-            this.btnRelatorioVendas.Click += new System.EventHandler(this.btnRelatorioVendas_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 293);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnRelatorioProduto);
+            this.Controls.Add(this.lblRelatorioVendas);
             this.Controls.Add(this.btnRelatorioVendas);
             this.Controls.Add(this.lblOutrasDespesas);
             this.Controls.Add(this.btnOutrasDespesas);
@@ -179,8 +204,10 @@
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Label lblOutrasDespesas;
         private System.Windows.Forms.Button btnOutrasDespesas;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRelatorioVendas;
         private System.Windows.Forms.Button btnRelatorioVendas;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRelatorioProduto;
     }
 }
 

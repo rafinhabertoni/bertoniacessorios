@@ -126,6 +126,12 @@
     <Compile Include="frmProduto.Designer.cs">
       <DependentUpon>frmProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRelatorioProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioProduto.Designer.cs">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRelatorioVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     <EmbeddedResource Include="frmProduto.resx">
       <DependentUpon>frmProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioProduto.resx">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRelatorioVenda.resx">
       <DependentUpon>frmRelatorioVenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptProdutos.rdlc" />
     <EmbeddedResource Include="rptVendas.rdlc" />
     <None Include="BertoniAcessoriosDataSet.xsc">
       <DependentUpon>BertoniAcessoriosDataSet.xsd</DependentUpon>
@@ -226,6 +236,9 @@
     <None Include="Resources\outras despesas.jpg" />
     <Content Include="logoBertoniAcessoriosIcone.ico" />
     <None Include="Resources\RelatorioVendas.png" />
+    <None Include="Resources\planilhas-para-controle-de-estoque.png" />
+    <None Include="Resources\erros_terceirizacao_armazenamento-860x400.jpg" />
+    <None Include="Resources\Organizar estoque.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
